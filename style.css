@@ -1,0 +1,249 @@
+/* 
+        Colours Used:
+
+        #f0fcf7 - component bg color
+        #20C997 - component border
+
+        #20C997 - Header Color
+        #0C2003 - heading and nav-items color
+
+        #D9EDDF - For form background
+      
+       
+
+        #004cb6 - btn bg
+        #fff - btn text
+
+        #005a29 - btn hover bg
+        #fff - btn hover text
+*/
+* {
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+}
+
+body{
+        display: grid;
+        place-content: center;
+        color: #0C2003;
+background-color: #f0fcf7;
+        
+}
+
+/*      
+        Main Container
+ */
+
+.container{
+        display: grid;
+background-color: #fff;
+        margin-top: 10px;
+        
+       max-width:62.5rem;
+        height: 100%;
+       
+        
+        border: 1px solid #20C997;
+        border-radius: 1rem;
+
+        grid-template-areas:
+                        'header'
+                        'nav'
+                        'main';
+                        
+}
+
+
+/* 
+        Header
+ */
+
+ header{
+        grid-area: header;
+        background-color: #20C997;
+        padding: 1rem;
+        
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+
+        display: grid;
+        grid-auto-flow: row;
+       
+ }
+
+ header h1{
+        text-align: center;
+        margin-bottom: 1rem;
+ }
+
+
+ header h1:hover{
+        text-decoration:underline;
+        cursor: pointer;
+        color: inherit;
+ }
+
+
+
+ nav ul{
+        grid-area: nav;
+        display: grid;
+        grid-auto-flow: column;
+        gap: 1rem;
+        
+        margin-top: 0rem;
+ }
+
+ nav ul li{
+        list-style: none;
+        padding: 1rem;
+        border:1px solid #005a29;
+        text-align: center;
+      
+        border-radius: .5rem;
+ }
+
+nav ul li a{
+        text-decoration: none;
+        color: inherit;
+ }
+
+nav ul li:hover { /* Nav items*/
+        cursor: pointer;
+        background-color: #005a29;
+        color: #fff;
+}
+
+
+/* 
+        Main Section
+ */
+
+ main{
+        grid-area: main;
+        display: grid;
+      
+        padding: 2rem;
+        gap: 1rem;
+   
+        max-width: inherit;
+        
+        grid-template-areas: 'img form';
+        grid-template-columns: 1fr;
+     
+}
+
+
+
+.img{
+        grid-area: img;
+        margin: auto;
+        height: max-content;
+}
+
+
+
+
+image{
+        width:100%;
+         height:auto;
+      
+}
+
+
+ /* 
+        Form Setion
+ */
+
+
+
+.form-wrapper {
+        grid-area: form;
+        position: relative;
+        overflow: hidden;
+        gap: 1rem;
+       
+        padding: 1rem;
+}
+
+.form-container {
+        position: relative;
+        transition: opacity 0.5s ease-in-out;
+
+}
+
+
+.form{
+        display: grid;       
+        gap: 1rem;  
+        margin-top: 1rem;
+
+        padding: 2rem;
+
+        background-color: #D9EDDF;
+        
+         border-radius: 1rem;
+      
+        
+        
+}
+
+.form input[type="email"],.form input[type="password"]{
+        padding: .5rem;
+        width: 100%;
+        margin: auto;
+        border-radius: .5rem;
+        border: 1px solid #0C2003;
+}
+
+.form input[type="email"]:hover,
+.form input[type="password"]:hover,
+.form input[type="email"]:focus,
+.form input[type="password"]:focus
+{
+        background-color:#f0fcf7;
+        border: 1px solid #20C997;
+}
+
+
+#member-status{
+        display: none;
+}
+
+
+/* Initially, hide the sign-up form */
+.sign-up-form {
+       
+        position: absolute;
+       display: none;
+        
+}
+
+/* Show sign-up form and hide log-in form when checkbox is checked */
+#member-status:checked~.form-container .sign-up-form {
+        
+        display: grid;
+        position: relative;
+}
+
+#member-status:checked~.form-container .log-in-form {
+      
+        position: absolute;
+        display: none;
+       
+}
+
+/* Button */
+.btn{
+        background-color: #004cb6;
+        color: #fff;
+        padding: .5rem 1rem;
+        border-radius: .5rem;
+        border: none;
+
+}
+
+.btn:hover{
+        background-color: #005a29;
+}

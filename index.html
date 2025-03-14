@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sliding Form Design</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>
+          Sliding Form Design
+        </h1>
+        
+        <nav>
+          <ul>
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+         
+          <section class="img">
+            <svg>
+            <image
+            
+              href="assets/undraw_hello_ccwj.svg"
+            />
+          </svg>
+          </section>
+       
+        
+        <section>
+            
+          
+
+        <div class="form-wrapper">
+            
+                <input type="checkbox" id="member-status">
+             
+          <div class="form-container">
+            
+            <!-- 
+                Sign-in Form
+            -->                
+            <form class="log-in-form form">
+              <div class="new-member">
+                    <label for="member-status"> Not a Member? Sign-up</label>
+                </div>
+
+                <div class="form-element">
+                  <label for="userEmail">Email</label><br>
+                <input type="email" name="userEmail" id="userEmail" placeholder="Enter Your Email" required>
+                </div>
+                <div class="form-element">
+                <label for="userPassword">Password</label><br>
+                <input type="password" name="userPassword" id="userPassword" placeholder="Enter Your Password" required>
+                  </div>
+                <input type="submit" class="btn" value="Log in">
+            </form>
+        
+
+         <!-- 
+                Sign-up Form
+            -->
+        
+            <form class="sign-up-form form" >
+              <div class="old-member">
+                    <label for="member-status">Already a Member? Log in</label>
+                        
+                    
+                </div>
+                
+                <div class="form-element">
+                <label for="newUserEmail">Email</label><br>
+                <input type="email" name="newUserEmail" id="newUserEmail" placeholder="Enter Your Email" required>
+                </div>
+                <div class="form-element">
+                <label for="newUserPassword">Password</label><br>
+                <input type="password" name="newUserPassword" id="newUserPassword" placeholder="Enter Your Password" required>
+</div>
+                <div class="form-element">
+                <label for="newUserPasswordConfirm">Confirm Password</label><br>
+                <input type="password" name="newUserPasswordConfirm" id="newUserPasswordConfirm" placeholder="Confirm Your Password" required>
+</div>
+                
+                <input type="submit" class="btn" value="Sign-up">
+            </form>
+          </div>
+        </div>
+
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
